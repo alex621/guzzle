@@ -253,7 +253,7 @@ class CurlMultiHandler
                 continue;
             }
             // It may not return the handle if it was cancelled
-            if (!array_key_exists('handle', $done) || is_null($done['handle'])){
+            if (!array_key_exists('handle', $done) || is_null($done['handle'])) {
                 continue;
             }
             $id = (int) $done['handle'];
