@@ -252,6 +252,10 @@ class CurlMultiHandler
                 // if it's not done, then it would be premature to remove the handle. ref https://github.com/guzzle/guzzle/pull/2892#issuecomment-945150216
                 continue;
             }
+            // It may not return the handle if it was cancelled
+            if (!array_key_exists('handle', $done) || is_null($done['handle'])){
+                continue;
+            }
             $id = (int) $done['handle'];
             \curl_multi_remove_handle($this->_mh, $done['handle']);
 
