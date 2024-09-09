@@ -110,6 +110,9 @@
         "sort-packages": true
     },
     "extra": {
+        "branch-alias": {
+            "dev-patchhandle": "7.9.x-dev"
+        },
         "bamarni-bin": {
             "bin-links": true,
             "forward-command": false
